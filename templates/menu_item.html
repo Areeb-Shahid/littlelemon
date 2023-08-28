@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="menu-item">
+  <div class="details">
+      <div class="description">
+          <h3>{{ item.name }}</h3>
+          <p class="menu-price">Price: ${{ item.price }}</p>
+          <p>{{ item.description }}</p>
+      </div>
+      <div class="image">
+          <img src="{{ item.image.url }}" alt="{{ item.name }}">
+      </div>
+  </div>
+</div>
+
+{% endblock %}

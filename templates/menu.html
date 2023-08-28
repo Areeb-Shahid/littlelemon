@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Add your navigation links here -->
+
+<div class="menu">
+  {% if menu %}
+    {% for item in menu %}
+    <div class="menu-item">
+        <h3><a href="{% url 'menu_item_detail' item.id %}">{{ item.name }}</a></h3>
+        <p class="menu-price">Price: ${{ item.price }}</p>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p>No items to display</p>
+  {% endif %}
+</div>
+
+
+{% endblock %}
